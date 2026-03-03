@@ -44,5 +44,5 @@ Fortalecimento Econômico: Auxiliar no crescimento de uma empresa do setor de co
 
 <img width="360" height="3284" alt="Frame 67" src="https://github.com/user-attachments/assets/ed845cb5-a492-410f-aba9-b531a3a0c75e" />
 
-
+OnClick:
 <img width="360" height="863" alt="Frame 68" src="https://github.com/user-attachments/assets/317872de-9153-45cc-81fe-3e4299972e35" />
