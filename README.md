@@ -8,6 +8,12 @@
 
 [Nicolas Holanda Varela - 10726611](https://github.com/NicolasVarela000)
 
+
+**Ideação do projeto**
+
+A ideia do projeto surgiu depois de uma conversa sobre qual o tema escolher e um colega do grupo sugeriu seguir com o tema da empresa de um familiar dele que trabalha com consultoria de construção de imóveis e queria poder divulgar suas ferramentas e serviços para seus clientes de uma forma mais transparente e com isso decidimos seguir com este objetivo de desenvolver um site para auxiliar nestes processos.
+
+
 **Resumo:**
 
 1. Resumo do Projeto
