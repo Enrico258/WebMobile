@@ -1,4 +1,4 @@
-# WebMobile
+# TuaEngenharia - Projeto WebMobile
 
 **Integrantes:**
 
@@ -7,3 +7,5 @@
 [Gustavo Sposito - 10753100](https://github.com/GustavoSposito)
 
 [Nicolas Holanda Varela - 10726611](https://github.com/NicolasVarela000)
+
+**Resumo:**
