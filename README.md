@@ -33,3 +33,14 @@ Ponte de Conexão: Atuar como um facilitador tecnológico que interliga cidadão
 Inclusão Digital: Garantir que qualquer usuário, independentemente do dispositivo, consiga solicitar serviços de engenharia de forma simples.
 
 Fortalecimento Econômico: Auxiliar no crescimento de uma empresa do setor de construção civil, gerando impacto indireto na economia local e na empregabilidade da região.
+
+**Wireframe:**
+
+**Desktop:**
+<img width="1440" height="2568" alt="Frame 1" src="https://github.com/user-attachments/assets/c325afdc-17ab-4e1f-8529-6bfa12299b99" />
+
+
+**Mobile:**
+
+<img width="360" height="3284" alt="Frame 67" src="https://github.com/user-attachments/assets/ed845cb5-a492-410f-aba9-b531a3a0c75e" />
+<img width="360" height="863" alt="Frame 68" src="https://github.com/user-attachments/assets/317872de-9153-45cc-81fe-3e4299972e35" />
