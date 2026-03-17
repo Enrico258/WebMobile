@@ -14,11 +14,34 @@ header {
     background: #313129;
     color: white;
 }
-
-.navbar {
+.container_header{
+    
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
+    align-items: center
+}
+
+nav {
+    padding-right: 40px;
+    justify-content: space-around;
+    
+}
+nav a{
+    margin-right: 30px;
+    color: #F4EDDD;
+    text-decoration: none;
+}
+.btn-box{
+    background-color: #4a4a44;
+    padding: 13px 25px;
+    border: 2px solid #F4EDDD;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    
 }
 
 .menu {
