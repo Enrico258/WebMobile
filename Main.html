@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Título da Página</title>
 
     <!-- SEO básico -->
@@ -25,7 +26,7 @@
                 <a href="">Sobre nós</a>
                 <a href="">Projetos</a>
                 <a href="">Serviços</a>
-                <a href=""class="btn-box">Faça seu orçamento</a>
+                <a href="#" id="abrirModal" class="btn-box abrirModal">Faça seu orçamento</a>
             </nav>
 
         </div>
@@ -37,7 +38,7 @@
         <section class="banner">
             <article class="banner_esquerda">
                 <span>Construções, reformas, consultoria e muito mais...</span>
-                <a href="#contato" class="btn-contato">
+                <a href="#contato" class="btn-contato abrirModal">
                     Fale conosco 
                     <img src="imagens/Vector.png">
                 </a>
@@ -132,6 +133,23 @@ Regularização e adequação de imóveis. Nosso compromisso é entregar resulta
         <p>© 2026 NossaEngenharia. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Pop up do orçamento -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="fecharModal" class="close">&times;</span>
+            
+            <h2>Solicitar Orçamento</h2>
+
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Telefone">
+                <textarea placeholder="Descreva seu projeto"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
     <!-- JavaScript -->
     <script src="script.js"></script>
 
