@@ -11,8 +11,8 @@
 
 **Ideação do projeto**
 
-A ideia do projeto surgiu depois de uma conversa sobre qual o tema escolher e um colega do grupo sugeriu seguir com o tema da empresa de um familiar dele que trabalha com consultoria de construção de imóveis e queria poder divulgar suas ferramentas e serviços para seus clientes de uma forma mais transparente e com isso decidimos seguir com este objetivo de desenvolver um site para auxiliar nestes processos.
-
+A ideia do projeto surgiu após uma conversa em grupo sobre qual tema escolher. No início, pensamos em algumas opções, mas acabamos optando pela sugestão de um colega, que comentou sobre a empresa de um familiar que trabalha com consultoria na construção de imóveis.
+Escolhemos esse tema porque vimos que muitas pessoas têm dificuldade em entender serviços de engenharia e não encontram informações claras. Então, decidimos desenvolver um site que ajude a explicar melhor esses serviços e facilite o contato com os clientes.
 
 **Resumo:**
 
@@ -20,25 +20,18 @@ A ideia do projeto surgiu depois de uma conversa sobre qual o tema escolher e um
 Este projeto consiste no desenvolvimento de uma plataforma web responsiva (Desktop e Mobile) para a empresa "Tua Engenharia". Utilizando as tecnologias HTML5, CSS3 e JavaScript, a proposta foca na criação de uma interface que não apenas divulgue serviços, mas que atue como uma ferramenta de acessibilidade à informação. O projeto busca democratizar o acesso a soluções de engenharia, permitindo que o usuário compreenda o valor técnico e os diferenciais da empresa através de uma navegação intuitiva e otimizada.
 
 2. Objetivos
-Visibilidade e Alcance: Promover a presença digital da empresa, destacando o catálogo completo de recursos e ferramentas que muitas vezes permanecem desconhecidos pelo público geral.
-
-Transparência e Confiança: Facilitar a comunicação direta entre cliente e construtora, utilizando a web para tornar os processos de engenharia mais claros e compreensíveis para leigos.
-
-Diferenciação de Mercado: Consolidar a identidade da "Tua Engenharia" frente à concorrência, evidenciando seus diferenciais competitivos através de um design que transmite segurança e profissionalismo.
+Visibilidade e Alcance: Promover a presença digital da empresa, destacando seus serviços de forma clara.
+Transparência e Confiança: Tornar os processos de engenharia mais compreensíveis para os clientes.
+Diferenciação de Mercado: Destacar os diferenciais da empresa por meio de uma plataforma organizada e profissional.
 
 3. Metodologia (Abordagem Extensionista)
-O desenvolvimento não será apenas técnico, mas baseado na interação entre teoria e prática comunitária:
-
-Levantamento de Requisitos: Identificação das principais dúvidas e dores dos clientes que buscam serviços de construção para traduzi-las em funcionalidades no site.
-
-Desenvolvimento Mobile-First: Priorização da experiência em dispositivos móveis, reconhecendo que a maior parte da população acessa serviços essenciais via smartphone.
-
-Ponte de Conexão: Atuar como um facilitador tecnológico que interliga cidadãos (clientes) a soluções técnicas de engenharia, reduzindo ruídos de comunicação e promovendo a transparência em orçamentos e execução de obras.
+O desenvolvimento será baseado nas principais dúvidas e dificuldades enfrentadas por pessoas ao contratar serviços de construção, principalmente aquelas que não possuem conhecimento técnico.
+O projeto busca facilitar o acesso à informação e melhorar o entendimento desses serviços, ajudando o público a tomar decisões mais conscientes, também será priorizado o desenvolvimento mobile-first, considerando que muitas pessoas utilizam o celular como principal meio de acesso à internet.
 
 4. Resultados Esperados
-Inclusão Digital: Garantir que qualquer usuário, independentemente do dispositivo, consiga solicitar serviços de engenharia de forma simples.
+Inclusão Digital: Garantir que qualquer usuário consiga acessar e entender os serviços de engenharia de forma simples.
 
-Fortalecimento Econômico: Auxiliar no crescimento de uma empresa do setor de construção civil, gerando impacto indireto na economia local e na empregabilidade da região.
+Fortalecimento Econômico: Auxiliar no crescimento da empresa e melhorar a comunicação com seus clientes.
 
 **Wireframe:**
 
