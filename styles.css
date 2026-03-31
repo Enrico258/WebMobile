@@ -356,4 +356,28 @@ button {
         flex-direction: column;
         gap: 20px;
     }
+    /* Centraliza o conteúdo do card e define uma altura */
+    .carousel-inner .item {
+        text-align: center;
+        background: #f9f9f9;
+        /* Cor de fundo leve */
+        padding: 50px;
+    }
+
+    .card {
+        display: inline-block;
+    }
+
+    .icone {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    /* Ajusta as setas para não ficarem em cima do texto se a tela for pequena */
+    .carousel-control {
+        background-image: none !important;
+        /* Remove o degradê preto padrão */
+        color: #333 !important;
+        /* Cor das setas */
+    }
 }

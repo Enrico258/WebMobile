@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Título da Página</title>
 
     <!-- SEO básico -->
@@ -12,6 +13,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
@@ -39,7 +46,7 @@
             <article class="banner_esquerda">
                 <span>Construções, reformas, consultoria e muito mais...</span>
                 <a href="#contato" class="btn-contato abrirModal">
-                    Fale conosco 
+                    Fale conosco
                     <img src="imagens/Vector.png">
                 </a>
             </article>
@@ -66,43 +73,63 @@
 
             <h2 class="titulo">Serviços e sobre nós</h2>
 
-            <div class="cards-servicos">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
 
-                <div class="card">
-                    <div class="icone">🏗</div>
-                    <p>Engenharia<br>Estrutural<br>Forense</p>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="card">
+                            <div class="icone">🏢</div>
+                            <p>Prédios comerciais e residenciais</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card">
+                            <div class="icone">🏗</div>
+                            <p>Engenharia Estrutural Forense</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card">
+                            <div class="icone">📐</div>
+                            <p>Novas construções</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="icone">🏠</div>
-                    <p>Reformas</p>
-                </div>
-
-                <div class="card">
-                    <div class="icone">📐</div>
-                    <p>Novas<br>construções</p>
-                </div>
-                
-
-                <div class="card">
-                    <div class="icone">🏢</div>
-                    <p>Prédios comerciais e residenciais</p>
-                </div>
-
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
             </div>
 
             <div class="conteudo-servicos">
 
                 <div class="texto">
                     <p>
-                        A Nossa Engenharia é uma construtora comprometida com qualidade, eficiência e confiança em cada projeto realizado. Atuamos no mercado oferecendo soluções completas em construção civil, sempre priorizando a satisfação dos nossos clientes e o cumprimento rigoroso de prazos.
-Contamos com uma equipe de profissionais qualificados e experientes, preparados para transformar ideias em projetos concretos, com segurança, inovação e alto padrão de acabamento.
-Oferecemos uma ampla gama de serviços para atender diferentes necessidades:
-Construção de imóveis residenciais e comerciais,
-Reformas e ampliações,
-Consultoria técnica e planejamento de obras,
-Gerenciamento e acompanhamento de projetos,
-Regularização e adequação de imóveis. Nosso compromisso é entregar resultados que aliam qualidade, durabilidade e excelência, garantindo que cada obra seja executada com responsabilidade e atenção aos detalhes.
+                        A Nossa Engenharia é uma construtora comprometida com qualidade, eficiência e confiança em cada
+                        projeto realizado. Atuamos no mercado oferecendo soluções completas em construção civil, sempre
+                        priorizando a satisfação dos nossos clientes e o cumprimento rigoroso de prazos.
+                        Contamos com uma equipe de profissionais qualificados e experientes, preparados para transformar
+                        ideias em projetos concretos, com segurança, inovação e alto padrão de acabamento.
+                        Oferecemos uma ampla gama de serviços para atender diferentes necessidades:
+                        Construção de imóveis residenciais e comerciais,
+                        Reformas e ampliações,
+                        Consultoria técnica e planejamento de obras,
+                        Gerenciamento e acompanhamento de projetos,
+                        Regularização e adequação de imóveis. Nosso compromisso é entregar resultados que aliam
+                        qualidade, durabilidade e excelência, garantindo que cada obra seja executada com
+                        responsabilidade e atenção aos detalhes.
                     </p>
                 </div>
 
@@ -137,7 +164,7 @@ Regularização e adequação de imóveis. Nosso compromisso é entregar resulta
     <div id="modal" class="modal">
         <div class="modal-content">
             <span id="fecharModal" class="close">&times;</span>
-            
+
             <h2>Solicitar Orçamento</h2>
 
             <form>
@@ -145,7 +172,7 @@ Regularização e adequação de imóveis. Nosso compromisso é entregar resulta
                 <input type="email" placeholder="Email" required>
                 <input type="tel" placeholder="Telefone">
                 <textarea placeholder="Descreva seu projeto"></textarea>
-                
+
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -154,4 +181,5 @@ Regularização e adequação de imóveis. Nosso compromisso é entregar resulta
     <script src="script.js"></script>
 
 </body>
+
 </html>
