@@ -2,19 +2,25 @@ const modal = document.getElementById("modal");
 const botoesAbrir = document.querySelectorAll(".abrirModal");
 const fechar = document.getElementById("fecharModal");
 
-botoesAbrir.forEach(botao => {
-    botao.addEventListener("click", function(e) {
-        e.preventDefault();
-        modal.style.display = "flex";
+if (modal) {
+
+    // Abrir modal
+    botoesAbrir.forEach(botao => {
+        botao.addEventListener("click", function(e) {
+            e.preventDefault();
+            modal.classList.add("ativo");
+        });
     });
-});
 
-fechar.addEventListener("click", function() {
-    modal.style.display = "none";
-});
+    // Fechar modal
+    fechar.addEventListener("click", function() {
+        modal.classList.remove("ativo");
+    });
 
-window.addEventListener("click", function(e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-});
+    // Fechar clicando fora
+    window.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.classList.remove("ativo");
+        }
+    });
+}
