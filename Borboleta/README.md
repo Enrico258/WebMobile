@@ -1,23 +1,26 @@
-**Ideação do projeto**
+# TuaEngenharia - Projeto WebMobile
 
-Este projeto é a continuação do Projeto 1, no qual foi desenvolvido um site institucional para a empresa Tua Engenharia. A proposta surgiu da necessidade de tornar os serviços de engenharia mais compreensíveis para pessoas sem conhecimento técnico.
-Nesta etapa, o objetivo foi modernizar a aplicação utilizando React e Next.js, tornando o site mais dinâmico, organizado e preparado para expansão, sem perder o foco no impacto social e no público real.
+**Integrantes:**
 
-**Resumo**
+[Enrico Cuono Alves Pereira - 10402875](https://github.com/Enrico258)
 
-O projeto consiste na migração do site desenvolvido anteriormente em HTML, CSS e JavaScript para uma aplicação baseada em React com Next.js. A nova versão utiliza componentização, gerenciamento de estado, rotas e uma API interna para tornar a interface mais interativa e dinâmica.
+[Gustavo Sposito - 10753100](https://github.com/GustavoSposito)
 
-**Objetivos**
+[Nicolas Holanda Varela - 10726611](https://github.com/NicolasVarela000)
 
-Migrar o projeto para React e Next.js
-Melhorar a interatividade da interface
-Organizar o código com componentização
-Implementar rotas simples e dinâmicas
-Utilizar uma API interna para consumo de dados
-Manter o caráter extensionista do projeto
-Tecnologias utilizadas
-React
-Next.js
-JavaScript
-HTML
-CSS
+**Ideação da funcionalidade implementada**
+
+Na segunda parte do projeto será implementada uma rota simples e uma rota dinâmica.
+Decidimos criar uma página dinâmica que apresenta o serviço selecionado pelo usuário, ou seja, é a mesma página mas o válores alternam conforme o serviço selecionado.
+
+Rota Dinâmica: As caixas de página de serviços serão clicáveis e levaram o usuário para a página da respectiva atividade.
+Rota Simples: Ao clicar em "Serviços" no header ele leva para a página do serviço de reformas.
+
+Cada tela possui setas de navegação, permitindo ao usuário alternar entre os serviços disponíveis de forma sequencial.
+
+Wireframe:
+
+<img width="1440" height="884" alt="Group 1" src="https://github.com/user-attachments/assets/e7023ee5-5ef0-44d3-a89a-0d8b4d53cd7a" />
+<img width="1440" height="884" alt="Group 2" src="https://github.com/user-attachments/assets/384f3a8f-1a28-4f7f-9d87-0815fa9183bf" />
+<img width="1451" height="884" alt="Group 3" src="https://github.com/user-attachments/assets/bc7236fc-3b61-43cc-8296-35625e6383af" />
+<img width="1451" height="884" alt="Group 4" src="https://github.com/user-attachments/assets/6152c0f0-ca16-4b12-ad42-86ff11e149a9" />
