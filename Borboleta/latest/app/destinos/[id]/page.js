@@ -77,7 +77,7 @@ export default async function DestinoPage({ params }) {
                     >
                         ❮
                     </Link>
-                    <div className={styles.imagem}>
+                    <div>
                         <Image
                             className={styles.imagem}
                             src={destino.caminhoImg}
