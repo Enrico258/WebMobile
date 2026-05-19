@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useEffect } from "react";
 import Destino from "./components/destino/Destino";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -37,19 +40,19 @@ export default function Home() {
         <section className={styles.container_header}>
           <img src="imagens/logo.png" alt="Logo" />
           <nav>
-            <a href="#Serv">Sobre nós</a>
-            <a href="">Projetos</a>
-            <a href="">Serviços</a>
-            <a href="#" className={`${styles.btn_box} abrirModal`}>
+            <Link href="#Serv">Sobre nós</Link>
+            <Link href="">Projetos</Link>
+            <Link href="/destinos/forense">Serviços</Link>
+            <Link href="#" className={`${styles.btn_box} abrirModal`}>
               Faça seu orçamento
-            </a>
+            </Link>
           </nav>
         </section>
       </header>
 
       <main>
 
-        <section className={styles.banner_esquerda}>
+        <section className={styles.banner}>
           <article className={styles.banner_esquerda}>
             <span>Construções, reformas, consultoria e muito mais...</span>
             <a href="#contato" className={`${styles.btn_contato} abrirModal`}>
@@ -78,12 +81,12 @@ export default function Home() {
 
         <section className={styles.servicos}>
 
-          <h2 className="titulo" id="Serv">Serviços e sobre nós</h2>
+          <h2 className={styles.titulo} id="Serv">Serviços e sobre nós</h2>
 
           {/* Bootstrap mantém className normal */}
-          <div id="myCarousel" className="carousel slide mobile-only" data-ride="carousel">
+          <div id="myCarousel" className={`carousel slide ${styles.mobile_only}`} data-ride="carousel">
 
-            <div className="carousel-inner">
+            <div className="carousel_inner">
               <section className="item active">
                 <section className={styles.card}>
                   <div className={styles.icone}>🏢</div>
@@ -132,7 +135,19 @@ export default function Home() {
           <div className={styles.conteudo_servicos}>
             <section className={styles.texto}>
               <p>
-                A Nossa Engenharia é uma construtora comprometida...
+                A Nossa Engenharia é uma construtora comprometida com qualidade, eficiência e confiança em cada
+                projeto realizado. Atuamos no mercado oferecendo soluções completas em construção civil, sempre
+                priorizando a satisfação dos nossos clientes e o cumprimento rigoroso de prazos.
+                Contamos com uma equipe de profissionais qualificados e experientes, preparados para transformar
+                ideias em projetos concretos, com segurança, inovação e alto padrão de acabamento.
+                Oferecemos uma ampla gama de serviços para atender diferentes necessidades:
+                Construção de imóveis residenciais e comerciais,
+                Reformas e ampliações,
+                Consultoria técnica e planejamento de obras,
+                Gerenciamento e acompanhamento de projetos,
+                Regularização e adequação de imóveis. Nosso compromisso é entregar resultados que aliam
+                qualidade, durabilidade e excelência, garantindo que cada obra seja executada com
+                responsabilidade e atenção aos detalhes.
               </p>
             </section>
 
@@ -144,7 +159,7 @@ export default function Home() {
         </section>
 
         <section className={styles.galeria}>
-          <h2 className="titulo">Galeria</h2>
+          <h2 className={styles.titulo}>Galeria</h2>
 
           <div className={styles.gal_imagens}>
             <img src="imagens/Frame 61.png" />

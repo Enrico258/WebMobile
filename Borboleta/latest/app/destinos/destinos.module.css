@@ -1,5 +1,10 @@
+:global(body) {
+    background: #f5f5f5;
+    color: #313129;
+}
+
 .sectionMain {
-    text-align: center;
+    background: white;
 }
 
 .imagem {
@@ -7,7 +12,125 @@
     object-fit: cover;
 }
 
+
+:global(header) {
+    background: #313129;
+    color: white;
+}
+
+.container_header {
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:global(nav) {
+    padding-right: 40px;
+    justify-content: space-around;
+}
+
+:global(nav a) {
+    margin-right: 30px;
+    color: #F4EDDD;
+    text-decoration: none;
+}
+
+.btn_box {
+    background-color: #4a4a44;
+    padding: 13px 25px;
+    border: 2px solid #F4EDDD;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.titulo {
+    padding: 20px 80px;
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.titulo::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: #c79a4a;
+    display: block;
+    margin-top: 8px;
+}
+.conteudo_servicos {
+    display: grid;
+    grid-template-columns: 40px 1.4fr 1fr 40px;
+    gap: 32px;
+    align-items: center;
+    width: 100%;
+}
+
+.imagemWrap {
+    width: 100%;
+}
+
+.imagem {
+    width: 90%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4a5568;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
 .descricao {
-    max-width: 500px;
-    margin: 1rem auto;
+    max-width: 520px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.btn_contato {
+    margin-top:  100px;
+    background-color: #efa60d;
+    color: #414141;
+    padding: 12px 25px;
+    border-radius: 12px;
+    width: 190px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_contato:hover {
+    background-color: #d48f0b;
+}
+
+.seta {
+    font-size: 42px;
+    color: #8a8a8a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.seta:hover {
+    color: #d39b12;
+    transform: scale(1.1);
 }

@@ -1,51 +1,50 @@
-* {
+:global(*) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body {
+:global(body) {
     background: #f5f5f5;
     color: #313129;
 }
 
-header {
+:global(header) {
     background: #313129;
     color: white;
 }
-.container_header{
-    
+
+.container_header {
     padding-left: 80px;
     padding-top: 5px;
     padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
-nav {
+:global(nav) {
     padding-right: 40px;
     justify-content: space-around;
-    
 }
-nav a{
+
+:global(nav a) {
     margin-right: 30px;
     color: #F4EDDD;
     text-decoration: none;
 }
-.btn-box{
+
+.btn_box {
     background-color: #4a4a44;
     padding: 13px 25px;
     border: 2px solid #F4EDDD;
     border-radius: 12px;
     font-weight: bold;
     display: inline-block;
-    
 }
 
-
-footer {
+:global(footer) {
     text-align: center;
     padding: 20px;
     background: #313129;
@@ -55,7 +54,7 @@ footer {
 .banner {
     display: flex;
     min-height: 700px;
-    background-image: url("imagens/construcao.png"); 
+    background-image: url("/imagens/construcao.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,6 +66,7 @@ footer {
     height: 100%;
     min-height: 850px;
 }
+
 .banner_esquerda span {
     display: inline-block;
     color: #e3c991;
@@ -77,7 +77,8 @@ footer {
     margin-top: 100px;
     margin-left: 80px;
 }
-.btn-contato {
+
+.btn_contato {
     margin-top: auto;
     background-color: #efa60d;
     color: #414141;
@@ -86,14 +87,14 @@ footer {
     width: 190px;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 100px;
     margin-left: 80px;
-    display: inline-flex; 
-    align-items: center;
-    gap: 10px; 
 }
-.btn-contato:hover {
+
+.btn_contato:hover {
     background-color: #d48f0b;
 }
 
@@ -107,108 +108,109 @@ footer {
     padding: 40px;
     margin-right: 30px;
 }
-.card-banner {
+
+.card_banner {
     width: 180px;
     height: 160px;
-
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px); 
-
+    backdrop-filter: blur(8px);
     border-radius: 15px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     color: white;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.card-banner p {
+
+.card_banner p {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.4;
 }
 
-.servicos{
-    padding:60px 80px;
-    background:#f5f7fa;
+.servicos {
+    padding: 60px 80px;
+    background: #f5f7fa;
 }
-.mobile-only {
+
+.mobile_only {
     display: none;
 }
 
-.desktop-only {
+.desktop_only {
     display: flex;
 }
-.titulo{
-    font-size:28px;
-    margin-bottom:30px;
-    position:relative;
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-.titulo::after{
-    content:"";
-    width:120px;
-    height:3px;
-    background:#c79a4a;
-    display:block;
-    margin-top:8px;
+.titulo::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: #c79a4a;
+    display: block;
+    margin-top: 8px;
 }
 
-.cards-servicos{
-    display:flex;
-    justify-content:center;
-    gap:120px;
-    margin-bottom:40px;
-}
-
-.card{
-    background:#e9edf3;
-    width:160px;
-    height:150px;
-    border-radius:15px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    box-shadow:0 6px 10px rgba(0,0,0,0.1);
-}
-
-.icone{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.conteudo-servicos{
-    display:flex;
-    gap:50px;
-    align-items:center;
-}
-
-.texto{
-    flex:1;
-    color:#4a5568;
-    line-height:1.6;
-}
-
-.imagem{
-    flex:1;
-}
-
-.Galeria{
-    padding:60px 80px;
-}.gal_imagens {
+.cards_servicos {
     display: flex;
-    gap: 40px; 
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 40px;
 }
 
-.imagem img{
-    width:100%;
-    border-radius:5px;
+.card {
+    background: #e9edf3;
+    width: 160px;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icone {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.conteudo_servicos {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.texto {
+    flex: 1;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.imagem {
+    flex: 1;
+}
+
+.galeria {
+    padding: 60px 80px;
+}
+
+.gal_imagens {
+    display: flex;
+    gap: 40px;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 .modal {
@@ -218,23 +220,26 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
+
 .modal.ativo {
     display: flex;
 }
 
-.modal-content {
+.modal_content {
+    position: relative;
     background: white;
-    padding: 0px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     width: 300px;
     border-radius: 8px;
 }
-.modal-content form input,
-.modal-content form textarea,
-.modal-content form button {
+
+.modal_content form input,
+.modal_content form textarea,
+.modal_content form button {
     width: 100%;
     margin-bottom: 10px;
     padding: 8px;
@@ -249,25 +254,25 @@ footer {
     cursor: pointer;
 }
 
-textarea {
+:global(textarea) {
     width: 100%;
     margin: 10px 0;
     padding: 8px;
     resize: none;
     height: 100px;
 }
-input {
+
+:global(input) {
     width: 100%;
     margin: 10px 0;
     padding: 8px;
     resize: none;
 }
 
-button {
+:global(button) {
     width: 100%;
     padding: 10px;
 }
-
 
 @media (max-width: 768px) {
     .container_header {
@@ -280,11 +285,11 @@ button {
         text-align: center;
     }
 
-    nav {
+    :global(nav) {
         padding-right: 0;
     }
 
-    nav a {
+    :global(nav a) {
         margin-right: 10px;
         font-size: 14px;
         margin-top: 20px;
@@ -296,7 +301,7 @@ button {
         gap: 10px;
         align-items: center;
     }
-    
+
     .banner {
         flex-direction: column;
         min-height: auto;
@@ -306,17 +311,17 @@ button {
         height: 100%;
         min-height: 320px;
         justify-content: center;
-        align-items: center;     
+        align-items: center;
     }
 
     .banner_esquerda span {
         width: 80%;
         font-size: 22px;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
-    .btn-contato {
-        margin-left: 0px;
+    .btn_contato {
+        margin-left: 0;
         margin-bottom: 40px;
     }
 
@@ -326,44 +331,42 @@ button {
         padding: 20px;
     }
 
-    
-    .card-banner {
+    .card_banner {
         width: 140px;
         height: 130px;
     }
 
-    
     .servicos {
         padding: 40px 20px;
     }
-    .mobile-only {
+
+    .mobile_only {
         display: block;
     }
 
-    .desktop-only {
+    .desktop_only {
         display: none;
     }
-    .cards-servicos {
+
+    .cards_servicos {
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
 
-    .conteudo-servicos {
+    .conteudo_servicos {
         flex-direction: column;
         gap: 20px;
     }
 
-    
     .gal_imagens {
         flex-direction: column;
         gap: 20px;
     }
-    /* Centraliza o conteúdo do card e define uma altura */
-    .carousel-inner .item {
+
+    :global(.carousel_inner .item) {
         text-align: center;
         background: #f9f9f9;
-        /* Cor de fundo leve */
         padding: 50px;
     }
 
@@ -376,11 +379,8 @@ button {
         margin-bottom: 15px;
     }
 
-    /* Ajusta as setas para não ficarem em cima do texto se a tela for pequena */
-    .carousel-control {
+    :global(.carousel_control) {
         background-image: none !important;
-        /* Remove o degradê preto padrão */
         color: #333 !important;
-        /* Cor das setas */
     }
 }
