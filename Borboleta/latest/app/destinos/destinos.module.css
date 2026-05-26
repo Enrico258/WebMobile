@@ -136,3 +136,68 @@
     color: #d39b12;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+
+    .container_header {
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    :global(nav) {
+        padding-right: 0;
+    }
+
+    :global(nav a) {
+        margin-right: 10px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .conteudo_servicos {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". imagem ."
+            "setaEsq texto setaDir";
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .conteudo_servicos > :nth-child(1) {
+        grid-area: setaEsq;
+    }
+
+    .conteudo_servicos > :nth-child(2) {
+        grid-area: imagem;
+    }
+
+    .conteudo_servicos > :nth-child(3) {
+        grid-area: texto;
+    }
+
+    .conteudo_servicos > :nth-child(4) {
+        grid-area: setaDir;
+    }
+
+    .imagem {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 10px;
+    }
+
+    .texto {
+        margin-bottom: 20px;
+    }
+
+    .descricao {
+        text-align: center;
+    }
+}
