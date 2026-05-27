@@ -2,12 +2,30 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Destino from "./components/destino/Destino";
 import Link from "next/link";
 
 export default function Home() {
+const [currentSlide, setCurrentSlide] = useState(0);
 
+  const slides = [
+    { icone: "🏢", texto: "Prédios comerciais e residenciais" },
+    { icone: "🏗", texto: "Engenharia Estrutural Forense" },
+    { icone: "🏠", texto: "Reformas" },
+    { icone: "📐", texto: "Novas construções" }
+  ];
+
+  const nextSlide = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+  
   useEffect(() => {
     const modal = document.getElementById("modal");
     const botoesAbrir = document.querySelectorAll(".abrirModal");
@@ -82,32 +100,32 @@ export default function Home() {
         <section className={styles.servicos}>
 
           <h2 className={styles.titulo} id="Serv">Serviços e sobre nós</h2>
-
-          {/* Bootstrap mantém className normal */}
-          <div id="myCarousel" className={`carousel slide ${styles.mobile_only}`} data-ride="carousel">
-
-            <div className="carousel_inner">
-              <section className="item active">
-                <section className={styles.card}>
-                  <div className={styles.icone}>🏢</div>
-                  <p>Prédios comerciais e residenciais</p>
+          
+          <div id="myCarousel" className={`carousel slide ${styles.mobile_only}`}>
+            <div className={styles.carousel_inner}>
+              {slides.map((slide, index) => (
+                <section 
+                  key={index} 
+                  className={`${styles.item} ${index === currentSlide ? styles.active : ""}`}
+                >
+                  <section className={styles.card}>
+                    <div className={styles.icone}>{slide.icone}</div>
+                    <p>{slide.texto}</p>
+                  </section>
                 </section>
-              </section>
-
-              <section className="item">
-                <section className={styles.card}>
-                  <div className={styles.icone}>🏗</div>
-                  <p>Engenharia Estrutural Forense</p>
-                </section>
-              </section>
-
-              <section className="item">
-                <section className={styles.card}>
-                  <div className={styles.icone}>📐</div>
-                  <p>Novas construções</p>
-                </section>
-              </section>
+              ))}
             </div>
+
+            {/* Botões de Controle acionando as funções do React */}
+            <a className={styles.carousel_control_left} href="#myCarousel" role="button" onClick={prevSlide}>
+              <span className="glyphicon glyphicon-chevron-left" aria-hidden="true">❮</span>
+              <span className="sr-only">Anterior</span>
+            </a>
+
+            <a className={styles.carousel_control_right} href="#myCarousel" role="button" onClick={nextSlide}>
+              <span className="glyphicon glyphicon-chevron-right" aria-hidden="true">❯</span>
+              <span className="sr-only">Próximo</span>
+            </a>
           </div>
 
           <div className={styles.cards_servicos}>

@@ -133,6 +133,7 @@
 .servicos {
     padding: 60px 80px;
     background: #f5f7fa;
+    position: relative;
 }
 
 .mobile_only {
@@ -274,6 +275,9 @@
     padding: 10px;
 }
 
+/* ==========================================================
+   MEDIA QUERY - RESPONSIVIDADE (MOBILE)
+   ========================================================== */
 @media (max-width: 768px) {
     .container_header {
         display: flex;
@@ -340,18 +344,18 @@
         padding: 40px 20px;
     }
 
+    /* Exibe o carrossel no mobile */
     .mobile_only {
         display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    .desktop_only {
-        display: none;
-    }
-
+    /* Oculta os elementos exclusivos de desktop */
+    .desktop_only,
     .cards_servicos {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        display: none;
     }
 
     .conteudo_servicos {
@@ -364,14 +368,30 @@
         gap: 20px;
     }
 
-    :global(.carousel_inner .item) {
+    .carousel_inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 180px;
+    }
+
+    .item {
+        display: none; 
+        width: 100%;
         text-align: center;
-        background: #f9f9f9;
-        padding: 50px;
+        padding: 10px;
+    }
+
+    .item.active {
+        display: flex; 
+        justify-content: center;
     }
 
     .card {
-        display: inline-block;
+        display: flex;
     }
 
     .icone {
@@ -379,8 +399,31 @@
         margin-bottom: 15px;
     }
 
-    :global(.carousel_control) {
-        background-image: none !important;
-        color: #333 !important;
+    .carousel_control_left,
+    .carousel_control_right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 32px;
+        color: #313129;
+        text-decoration: none;
+        padding: 15px;
+        z-index: 10;
+        user-select: none;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+
+    .carousel_control_left:hover,
+    .carousel_control_right:hover {
+        opacity: 0.7;
+    }
+
+    .carousel_control_left {
+        left: -5px;
+    }
+
+    .carousel_control_right {
+        right: -5px;
     }
 }

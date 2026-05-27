@@ -1,54 +1,57 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../destinos.module.css";
-import { notFound } from "next/navigation";
-import Destino from "../../components/destino/Destino";
+import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 
-export default async function DestinoPage({ params }) {
+export default function DestinoPage() {
+    // No 'use client', pegamos os params através do hook useParams()
+    const params = useParams();
+    const id = params?.id;
 
-    const { id } = await params;
+    const [dadosDestino, setDadosDestino] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    const dadosDestino = {
-        forense: {
-            nome: 'Engenharia estrutural forense',
-            descricao: 'Atuamos na análise técnica de estruturas com foco na identificação de falhas, patologias e causas de danos em edificações, oferecendo diagnósticos precisos e soluções seguras. Utilizamos metodologias modernas de inspeção, ensaios e modelagens para avaliar riscos e propor intervenções eficazes, sempre em conformidade com normas técnicas. Já prestamos serviços para clientes como Condomínio Residencial Jardim das Torres, Indústria Metal Forte e o Centro Empresarial Nova Era, contribuindo para a segurança e a durabilidade das estruturas analisadas.',
-            caminhoImg: '/imagens/forense.png'
-        },
-        construcoes: {
-            nome: 'Novas contruções',
-            descricao: 'Executamos projetos de novas construções com planejamento estratégico, controle rigoroso de qualidade e gestão eficiente de recursos, garantindo obras seguras, funcionais e dentro do prazo. Desde a concepção até a entrega final, nossa equipe acompanha cada etapa com foco em inovação e excelência construtiva. Entre nossos clientes, destacam-se projetos realizados para a Construtora Horizonte Sul, a rede comercial Prime Center e residências personalizadas de médio e alto padrão, sempre entregando resultados que aliam estética, desempenho e valorização do investimento.',
-            caminhoImg: '/imagens/construcoes.png'
-        },
-        reformas: {
-            nome: 'Reformas',
-            descricao: 'Oferecemos serviços completos de reforma, combinando planejamento técnico, execução precisa e acabamento de alto padrão para transformar imóveis residenciais e comerciais com eficiência e segurança. Atuamos desde pequenas modernizações até reestruturações completas, sempre com acompanhamento profissional em todas as etapas, cumprimento de prazos e transparência nos custos. Ao longo dos anos, já atendemos clientes como residências particulares de alto padrão, redes de escritórios corporativos e estabelecimentos comerciais — incluindo projetos realizados para empresas como Clínica Vida+, Escritório Almeida & Souza e a rede de lojas Espaço Urbano — entregando soluções personalizadas que valorizam cada espaço e atendem às necessidades específicas de cada cliente.',
-            caminhoImg: '/imagens/reformas.png'
-        },
-        predios: {
-            nome: 'Prédios comeciais e residênciais',
-            descricao: 'Somos especializados na construção de edifícios residenciais e comerciais, desenvolvendo empreendimentos que atendem às demandas do mercado moderno, com soluções arquitetônicas eficientes e infraestrutura de alta qualidade. Nossos projetos priorizam conforto, segurança, sustentabilidade e valorização imobiliária. Já entregamos obras para clientes como o Edifício Vista Bela, o Complexo Empresarial Tower Business e o Residencial Parque Central, consolidando nossa atuação no desenvolvimento de empreendimentos sólidos e competitivos.',
-            caminhoImg: '/imagens/predios.png'
+    // Chamada para a API local
+    useEffect(() => {
+        async function carregarDados() {
+            try {
+                const res = await fetch('/api/destinos');
+                if (!res.ok) throw new Error('Erro ao buscar dados');
+                const dados = await res.json();
+                setDadosDestino(dados);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
         }
+        carregarDados();
+    }, []);
+
+    // Enquanto a API não responde
+    if (loading) {
+        return <div className={styles.loading}>Carregando...</div>;
+    }
+
+    // Se carregou e o ID digitado na URL não existe no JSON
+    if (!dadosDestino || !dadosDestino[id]) {
+        notFound();
     }
 
     const destino = dadosDestino[id];
-
-    if (!destino) {
-        notFound();
-    }
     const chaves = Object.keys(dadosDestino);
-
     const indexAtual = chaves.indexOf(id);
 
-    const anterior =
-        indexAtual === 0
-            ? chaves[chaves.length - 1]
-            : chaves[indexAtual - 1];
+    const anterior = indexAtual === 0 
+        ? chaves[chaves.length - 1] 
+        : chaves[indexAtual - 1];
 
-    const proximo =
-        indexAtual === chaves.length - 1
-            ? chaves[0]
-            : chaves[indexAtual + 1];
+    const proximo = indexAtual === chaves.length - 1 
+        ? chaves[0] 
+        : chaves[indexAtual + 1];
 
     return (
         <>
@@ -65,18 +68,18 @@ export default async function DestinoPage({ params }) {
                     </nav>
                 </section>
             </header>
+
             <section className={styles.sectionMain}>
                 <h2 className={styles.titulo}>{destino.nome}</h2>
 
-
                 <div className={styles.conteudo_servicos}>
-                    {/* seta esquerda */}
                     <Link
                         href={`/destinos/${anterior}`}
                         className={styles.seta}
                     >
                         ❮
                     </Link>
+
                     <div>
                         <Image
                             className={styles.imagem}
@@ -84,24 +87,24 @@ export default async function DestinoPage({ params }) {
                             alt={destino.nome}
                             width={500}
                             height={350}
+                            priority
                         />
                     </div>
+
                     <section className={styles.texto}>
                         <p className={styles.descricao}>{destino.descricao}</p>
                         <a href="#contato" className={`${styles.btn_contato} abrirModal`}>
                             Fale conosco
-                            <img src="/imagens/Vector.png" />
+                            <img src="/imagens/Vector.png" alt="Seta" />
                         </a>
                     </section>
-                    {/* seta esquerda */}
                     <Link
-                        href={`/destinos/${anterior}`}
+                        href={`/destinos/${proximo}`}
                         className={styles.seta}
                     >
                         ❯
                     </Link>
                 </div>
-
             </section>
         </>
     );
