@@ -7,13 +7,13 @@ import Destino from "./components/destino/Destino";
 import Link from "next/link";
 
 export default function Home() {
-const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { icone: "🏢", texto: "Prédios comerciais e residenciais" },
-    { icone: "🏗", texto: "Engenharia Estrutural Forense" },
-    { icone: "🏠", texto: "Reformas" },
-    { icone: "📐", texto: "Novas construções" }
+    { icone: "🏢", texto: "Prédios comerciais e residenciais", url: "predios" },
+    { icone: "🏗", texto: "Engenharia Estrutural Forense", url: "forense" },
+    { icone: "🏠", texto: "Reformas", url: "reformas"},
+    { icone: "📐", texto: "Novas construções", url: "construcoes"}
   ];
 
   const nextSlide = (e: React.MouseEvent) => {
@@ -25,7 +25,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
     e.preventDefault();
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
-  
+
   useEffect(() => {
     const modal = document.getElementById("modal");
     const botoesAbrir = document.querySelectorAll(".abrirModal");
@@ -59,7 +59,6 @@ const [currentSlide, setCurrentSlide] = useState(0);
           <img src="imagens/logo.png" alt="Logo" />
           <nav>
             <Link href="#Serv">Sobre nós</Link>
-            <Link href="">Projetos</Link>
             <Link href="/destinos/forense">Serviços</Link>
             <Link href="#" className={`${styles.btn_box} abrirModal`}>
               Faça seu orçamento
@@ -100,18 +99,20 @@ const [currentSlide, setCurrentSlide] = useState(0);
         <section className={styles.servicos}>
 
           <h2 className={styles.titulo} id="Serv">Serviços e sobre nós</h2>
-          
+
           <div id="myCarousel" className={`carousel slide ${styles.mobile_only}`}>
             <div className={styles.carousel_inner}>
               {slides.map((slide, index) => (
-                <section 
-                  key={index} 
+                <section
+                  key={index}
                   className={`${styles.item} ${index === currentSlide ? styles.active : ""}`}
                 >
-                  <section className={styles.card}>
-                    <div className={styles.icone}>{slide.icone}</div>
-                    <p>{slide.texto}</p>
-                  </section>
+                  <Link href={"/destinos/" + slide.url}>
+                    <section className={styles.card}>
+                      <div className={styles.icone}>{slide.icone}</div>
+                      <p>{slide.texto}</p>
+                    </section>
+                  </Link>
                 </section>
               ))}
             </div>
@@ -129,25 +130,34 @@ const [currentSlide, setCurrentSlide] = useState(0);
           </div>
 
           <div className={styles.cards_servicos}>
-            <section className={styles.card}>
-              <div className={styles.icone}>🏗</div>
-              <p>Engenharia Estrutural Forense</p>
-            </section>
+            <Link href="/destinos/forense">
+              <section className={styles.card}>
+                <div className={styles.icone}>🏗</div>
+                <p>Engenharia Estrutural Forense</p>
+              </section>
+            </Link>
 
-            <section className={styles.card}>
-              <div className={styles.icone}>🏠</div>
-              <p>Reformas</p>
-            </section>
+            <Link href="/destinos/reformas">
+              <section className={styles.card}>
+                <div className={styles.icone}>🏠</div>
+                <p>Reformas</p>
+              </section>
+            </Link>
 
-            <section className={styles.card}>
-              <div className={styles.icone}>📐</div>
-              <p>Novas construções</p>
-            </section>
+            <Link href="/destinos/construcoes">
+              <section className={styles.card}>
+                <div className={styles.icone}>📐</div>
+                <p>Novas construções</p>
+              </section>
+            </Link>
 
-            <section className={styles.card}>
-              <div className={styles.icone}>🏢</div>
-              <p>Prédios comerciais e residenciais</p>
-            </section>
+
+            <Link href="/destinos/predios">
+              <section className={styles.card}>
+                <div className={styles.icone}>🏢</div>
+                <p>Prédios comerciais e residenciais</p>
+              </section>
+            </Link>
           </div>
 
           <div className={styles.conteudo_servicos}>
