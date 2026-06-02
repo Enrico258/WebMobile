@@ -1,0 +1,278 @@
+
+.logo_header {
+    height: 70px;          
+    width: auto;           
+    display: flex;
+    object-fit: contain;   
+}
+.header_projetos {
+    background: #313129;
+    color: white;
+}
+
+.container_header {
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_projetos {
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_projetos a {
+    color: #F4EDDD;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.nav_projetos a:hover {
+    color: #c79a4a;
+}
+
+.btn_box {
+    background-color: #c79a4a;
+    padding: 12px 20px;
+    border: 2px solid #c79a4a;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    color: #313129 !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.projetos_heroi {
+    background-image: url("/imagens/construcao.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroi_overlay {
+    background-color: rgba(49, 49, 41, 0.85);
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.heroi_conteudo {
+    text-align: center;
+    max-width: 800px;
+}
+
+.titulo_heroi {
+    font-size: 48px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.titulo_heroi .destaque {
+    color: #c79a4a;
+}
+
+.subtitulo_heroi {
+    font-size: 20px;
+    color: #F4EDDD;
+    font-family: Arial, sans-serif;
+}
+
+
+.projetos_main {
+    padding: 80px 80px;
+    background: #f5f5f5;
+    min-height: 80vh;
+    font-family: Arial, sans-serif;
+}
+
+.grid_projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.card_projeto {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.imagem_container_slider {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+}
+
+.slider_customizado {
+    width: 100%;
+    height: 100%;
+ 
+    --divider-color: rgba(255, 255, 255, 0.8);
+    --handle-color: #c79a4a; 
+    --handle-size: 40px;
+}
+
+.imagem_obra_slider {
+    width: 100%;
+    height: 300px; /* Mesma altura do contêiner */
+    object-fit: cover;
+    display: block;
+}
+
+.badge_interativo {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(49, 49, 41, 0.7);
+    color: #F4EDDD;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    pointer-events: none; 
+}
+
+
+.imagem_container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagem_obra {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card_projeto:hover .imagem_obra {
+    transform: scale(1.05); 
+}
+
+.conteudo_card {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+
+.local_badge {
+    position: absolute;
+    top: -20px; 
+    right: 25px;
+    background: #4a4a44;
+    color: #F4EDDD;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.categoria {
+    font-size: 11px;
+    color: #c79a4a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.conteudo_card h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    color: #313129;
+}
+
+.conteudo_card p {
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+
+.ficha_tecnica {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.ficha_tecnica span {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.ficha_tecnica strong {
+    color: #313129;
+    font-size: 15px;
+}
+
+.btn_detalhes {
+    font-size: 13px;
+    color: #313129;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.btn_detalhes:hover {
+    color: #c79a4a;
+}
+
+
+.footer_projetos {
+    text-align: center;
+    padding: 30px;
+    background: #313129;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .projetos_main {
+        padding: 40px 20px;
+    }
+
+    .grid_projetos {
+        grid-template-columns: 1fr;
+    }
+    
+    .imagem_container_slider, .imagem_container, .imagem_obra_slider {
+        height: 250px; 
+    }
+}

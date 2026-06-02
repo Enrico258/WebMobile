@@ -32,7 +32,8 @@ export default function DestinoPage() {
             }
         }
         carregarDados();
-    }, []);
+            
+    }, [])
 
     // Enquanto a API não responde
     if (loading) {
@@ -64,7 +65,10 @@ export default function DestinoPage() {
                         <img src="/imagens/logo.png" alt="Logo" />
                     </Link>
                     <nav>
-                        <Link href="#Serv">Sobre nós</Link>
+
+                        
+                        <Link href="/#sobre-nos">Sobre nós</Link>
+                        <Link href="/projetos">Projetos</Link>
                         <Link href="/destinos/forense">Serviços</Link>
                         <Link
                             href="#"

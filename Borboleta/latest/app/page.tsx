@@ -32,7 +32,6 @@ export default function Home() {
     const fechar = document.getElementById("fecharModal");
 
     if (modal) {
-
       botoesAbrir.forEach(botao => {
         botao.addEventListener("click", function (e) {
           e.preventDefault();
@@ -59,6 +58,11 @@ export default function Home() {
           <img src="imagens/logo.png" alt="Logo" />
           <nav>
             <Link href="#Serv">Sobre nós</Link>
+            {/* Aponta para o ID da seção Sobre Nós/Serviços */}
+            <Link href="#sobre-nos">Sobre nós</Link>
+            {/* Aponta para o ID da Galeria/Projetos */}
+            <Link href="/projetos">Projetos</Link>
+            {/* Link para a página interna de serviços (mantido) */}
             <Link href="/destinos/forense">Serviços</Link>
             <Link href="#" className={`${styles.btn_box} abrirModal`}>
               Faça seu orçamento
@@ -72,7 +76,7 @@ export default function Home() {
         <section className={styles.banner}>
           <article className={styles.banner_esquerda}>
             <span>Construções, reformas, consultoria e muito mais...</span>
-            <a href="#contato" className={`${styles.btn_contato} abrirModal`}>
+            <a href="#" className={`${styles.btn_contato} abrirModal`}>
               Fale conosco
               <img src="imagens/Vector.png" />
             </a>
@@ -96,9 +100,10 @@ export default function Home() {
           </article>
         </section>
 
-        <section className={styles.servicos}>
+        {/* Adicionado o id="sobre-nos" aqui para o link do menu funcionar */}
+        <section className={styles.servicos} id="sobre-nos">
 
-          <h2 className={styles.titulo} id="Serv">Serviços e sobre nós</h2>
+          <h2 className={styles.titulo}>Serviços e sobre nós</h2>
 
           <div id="myCarousel" className={`carousel slide ${styles.mobile_only}`}>
             <div className={styles.carousel_inner}>
@@ -186,7 +191,8 @@ export default function Home() {
 
         </section>
 
-        <section className={styles.galeria}>
+        {/* Adicionado o id="projetos" aqui para o link de Projetos funcionar */}
+        <section className={styles.galeria} id="projetos">
           <h2 className={styles.titulo}>Galeria</h2>
 
           <div className={styles.gal_imagens}>
