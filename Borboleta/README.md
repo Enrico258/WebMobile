@@ -14,7 +14,7 @@ Na segunda parte do projeto será implementada uma rota simples e uma rota dinâ
 Decidimos criar uma página dinâmica que apresenta o serviço selecionado pelo usuário, ou seja, é a mesma página mas o válores alternam conforme o serviço selecionado.
 
 Rota Dinâmica: As caixas de página de serviços serão clicáveis e levaram o usuário para a página da respectiva atividade.
-Rota Simples: Ao clicar em "Serviços" no header ele leva para a página do serviço de reformas.
+Rota Simples: Ao clicar em "Projetos" no header ele leva para a página dos projetos.
 
 Cada tela possui setas de navegação, permitindo ao usuário alternar entre os serviços disponíveis de forma sequencial.
 
@@ -24,3 +24,12 @@ Cada tela possui setas de navegação, permitindo ao usuário alternar entre os 
 <img width="1440" height="884" alt="Group 2" src="https://github.com/user-attachments/assets/384f3a8f-1a28-4f7f-9d87-0815fa9183bf" />
 <img width="1451" height="884" alt="Group 3" src="https://github.com/user-attachments/assets/bc7236fc-3b61-43cc-8296-35625e6383af" />
 <img width="1451" height="884" alt="Group 4" src="https://github.com/user-attachments/assets/6152c0f0-ca16-4b12-ad42-86ff11e149a9" />
+<img width="1877" height="905" alt="image" src="https://github.com/user-attachments/assets/a1a124b3-3fe3-43bc-a962-72335c383d7d" />
+
+**Novas ferramentas e métodos utilizados:**
+
+- API
+- Rota Dinâmica e Simples
+- Sliders
+- Slides
+- Conversão de HTML para JS
