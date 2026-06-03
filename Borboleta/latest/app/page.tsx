@@ -57,8 +57,6 @@ export default function Home() {
         <section className={styles.container_header}>
           <img src="imagens/logo.png" alt="Logo" />
           <nav>
-            <Link href="#Serv">Sobre nós</Link>
-            {/* Aponta para o ID da seção Sobre Nós/Serviços */}
             <Link href="#sobre-nos">Sobre nós</Link>
             {/* Aponta para o ID da Galeria/Projetos */}
             <Link href="/projetos">Projetos</Link>
