@@ -35,9 +35,11 @@ Cada tela possui setas de navegação, permitindo ao usuário alternar entre os 
 - Conversão de HTML para JS
 
 **Tela de serviços com migração dinamica:**
+
 <img width="578" height="775" alt="image" src="https://github.com/user-attachments/assets/909eb677-b9b2-4f51-9e1a-cf12f1f00df9" />
 
 Os dados são obtivos por requisição do dados.json:
+
 <img width="1020" height="448" alt="image" src="https://github.com/user-attachments/assets/e66ce09d-5c21-4452-8dfb-10638b3753c0" />
 
 
