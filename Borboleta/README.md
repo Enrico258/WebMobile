@@ -40,6 +40,8 @@ Cada tela possui setas de navegação, permitindo ao usuário alternar entre os 
 
 Os dados são obtivos por requisição do dados.json:
 
+<img width="544" height="332" alt="image" src="https://github.com/user-attachments/assets/c8155166-8018-4bfb-bb42-1cbcd57f8af6" />
+
 <img width="1020" height="448" alt="image" src="https://github.com/user-attachments/assets/e66ce09d-5c21-4452-8dfb-10638b3753c0" />
 
 
